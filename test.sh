@@ -2,5 +2,5 @@
 
 set -euxo pipefail
 
-pushd transformscsv/api
+pushd transforms/api
 pytest -rA

@@ -1,20 +1,14 @@
-from . import Input, Output, TRANSFORMS_CSV_MAP
+from . import Input, Output, TRANSFORMS_CSV_MAP, transform_df
 
 import os
 import shutil
 
-from transforms.api import transform_df
-
 global TRANSFORMS_CSV_MAP
-OUTPUT_DIR = "test_output"
 
-TRANSFORMS_CSV_MAP["out"] = OUTPUT_DIR
+TRANSFORMS_CSV_MAP["out"] = "out.csv"
 TRANSFORMS_CSV_MAP["in"] = "in.csv"
 
 def test_xform():
-  if os.path.exists(OUTPUT_DIR):
-    shutil.rmtree(OUTPUT_DIR)
-
   out = Output("out")
 
   @transform_df(out, in_=Input("in"))

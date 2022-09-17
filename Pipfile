@@ -9,6 +9,6 @@ name = "pypi"
 python_version = "3.8"
 
 [packages]
-transforms = {git = "ssh://git@github-blakehawkins/blakehawkins/foundry-transforms-api"}
+transformsbase = {git = "ssh://git@github-blakehawkins/blakehawkins/foundry-transforms-api"}
 pytest = "*"
 pyspark = "*"
