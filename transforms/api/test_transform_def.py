@@ -11,7 +11,7 @@ TRANSFORMS_CSV_MAP["in"] = "in.csv"
 def test_xform():
   out = Output("out")
 
-  @transform_df(out, in_=Input("in"))
+  @transform_df(out, in_=Input("in", spark_conf={"1": "2"}))
   def myxform(in_):
     return in_
 
