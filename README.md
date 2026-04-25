@@ -1,8 +1,15 @@
 # Install
 
+Ensure you have [pixi](https://pixi.sh) installed.
+
+To install dependencies and set up the environment:
 ```
-pipenv install git+ssh://github.com/blakehawkins/foundry-transforms-api#egg=transformsbase
-pipenv install git+ssh://github.com/blakehawkins/foundry-transforms-api-csv#egg=transforms
+pixi install
+```
+
+To run the tests:
+```
+pixi run test
 ```
 
 # Usage
